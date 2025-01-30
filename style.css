@@ -76,16 +76,22 @@ body {
   width: 120px;
   line-height: 35px;
   text-align: center;
-  left: 100%;
-  top: 50%;
-  background: #1d1b31;
-  color: #fff;
+  left: 122px;
+  top: 0;
+  background: #fff;
   font-size: 15px;
-  border-radius: 12px;
+  border-radius: 6px;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.4s;
+  transition: 0s;
   transform: translateY(-50%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar ul li:hover .tooltip {
+  opacity: 1;
+  transition: all 0.5s;
+  top: 50%;
 }
 
 .sidebar ul li input {
