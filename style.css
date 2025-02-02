@@ -38,6 +38,7 @@ body {
   align-items: center;
   opacity: 0;
   pointer-events: none;
+  transition: all 0.5s ease;
 }
 
 .sidebar.active .logo_content .logo {
@@ -136,8 +137,9 @@ body {
 
 .sidebar ul li .bx-search {
   position: absolute;
+  z-index: 99;
   font-size: 22px;
-  left: 10px;
+  /* left: 10px; */
   color: #fff;
   transition: all 0.5s ease;
 }
@@ -173,6 +175,7 @@ body {
 .sidebar .links_name {
   opacity: 0;
   pointer-events: none;
+  transition: all 0.5s ease;
 }
 
 .sidebar.active .links_name {
@@ -192,6 +195,11 @@ body {
   position: relative;
   height: 60px;
   padding: 10px 6px;
+  background: none;
+  transition: all 0.4s ease;
+}
+
+.sidebar.active .profile_content .profile {
   background: #1d1b31;
 }
 
@@ -209,8 +217,8 @@ body {
 }
 
 .profile .profile_details img {
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
   object-fit: cover;
   border-radius: 12px;
 }
@@ -238,21 +246,28 @@ body {
   font-size: 20px;
   border-radius: 12px;
   text-align: center;
+  transition: all 0.4s ease;
+  background: #1d1b31;
 }
 
 .sidebar.active .profile #log_out {
   left: 88%;
 }
 
+.sidebar.active .profile #log_out {
+  background: none;
+}
+
 .home_content {
   position: absolute;
   height: 100%;
-  width: calc(100% - 250px);
-  left: 250px;
-  min-height: 100vh;
+  width: calc(100% - 78px);
+  left: 240px;
+  transition: all 0.5s ease;
+  /* min-height: 100vh;
   background: #f0f0f0;
-  transition: all 0.5s;
-  padding: 20px;
+  
+  padding: 20px; */
 }
 
 .home_content .text {
@@ -260,4 +275,9 @@ body {
   font-weight: 500;
   color: #11101d;
   margin: 12px;
+}
+
+.sidebar.active ~ .home_content {
+  width: calc(100% - 240px);
+  left: 240px;
 }
